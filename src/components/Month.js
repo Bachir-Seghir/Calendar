@@ -5,11 +5,11 @@ import moment from 'moment';
 import classnames from 'classnames';
 import { CalendarContext } from '../contexts/CalendarContext';
 
-export default function Month({ monthProp }) {
+export default function Month({ monthOfYear }) {
   const { month, year, currentView, setMonth, setCurrentView } = useContext(
     CalendarContext
   );
-  const monthObj = currentView === 'month' ? month : monthProp;
+  const monthObj = currentView === 'month' ? month : monthOfYear;
 
   const handleViewChange = useCallback(() => {
     if (currentView === 'year') {

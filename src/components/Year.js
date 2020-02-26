@@ -20,7 +20,7 @@ export default function Year() {
   return (
     <div className='months'>
       {months.map(month => (
-        <Month key={month.format('MMMM')} monthProp={month} />
+        <Month key={month.unix()} monthOfYear={month} />
       ))}
     </div>
   );
