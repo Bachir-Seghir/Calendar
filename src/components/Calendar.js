@@ -3,6 +3,9 @@ import ToggleView from './ToggleView';
 import Header from './Header';
 import Year from './Year';
 import Month from './Month';
+import Week from './Week';
+import DayFullView from './DayFullView';
+
 import { CalendarContext } from '../contexts/CalendarContext';
 
 export default function Calendar() {
@@ -16,6 +19,13 @@ export default function Calendar() {
 
     case 'year':
       View = Year;
+      break;
+    case 'week':
+      View = Week;
+      break;
+
+    case 'day':
+      View = DayFullView;
       break;
 
     default:

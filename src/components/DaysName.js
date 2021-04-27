@@ -4,6 +4,11 @@ import { CalendarContext } from '../contexts/CalendarContext';
 
 export default function DaysName() {
   const { currentView } = useContext(CalendarContext);
+  console.log(
+    moment()
+      .week(0)
+      .date()
+  );
 
   return (
     <div className='days_name'>
@@ -13,7 +18,7 @@ export default function DaysName() {
           currentView === 'year' ? (
             <span key={name}>{name.slice(0, 1)}</span>
           ) : (
-            <span key={name}>{name}</span>
+            <span key={name}>{`${name} `}</span>
           )
         )}
     </div>
